@@ -28,15 +28,6 @@ export default defineComponent({
   },
   setup() {
     const currentIndex = ref(0);
-    const isLightboxOpen = ref(false);
-
-    const openLightbox = () => {
-      isLightboxOpen.value = true;
-    };
-
-    const closeLightbox = () => {
-      isLightboxOpen.value = false;
-    };
     const touchStartX = ref<number | null>(null);
 
     const previousIndex = computed(() => clampIndex(currentIndex.value - 1));
@@ -60,10 +51,6 @@ export default defineComponent({
       if (event.key === 'ArrowRight') {
         event.preventDefault();
         next();
-      }
-
-      if (event.key === 'Escape') {
-        closeLightbox();
       }
     };
 
@@ -142,19 +129,12 @@ export default defineComponent({
 
                   <div class="relative isolate h-[560px] overflow-hidden bg-stone-950">
                     <img
-                      src={current.src}
-                      alt=""
-                      aria-hidden="true"
-                      class="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl"
-                    />
-
-                    <img
                       key={current.src}
                       src={current.src}
                       alt={current.alt}
                       loading="eager"
                       decoding="async"
-                      class="relative z-10 mx-auto block h-full w-full cursor-default object-contain" onClick={openLightbox}
+                      class="relative z-10 block max-h-full max-w-full object-contain"
                     />
 
                     <button
@@ -250,50 +230,11 @@ export default defineComponent({
               </div>
             </div>
           </section>
-        {isLightboxOpen.value && (
-          <div
-            class="fixed inset-0 z-50 flex items-center justify-center bg-stone-900/40 p-6 backdrop-blur-xl"
-            onClick={closeLightbox}
-          >
-
-            <img
-              src={current.src}
-              alt=""
-              aria-hidden="true"
-              class="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl"
-            />
-
-            <img
-              src={current.src}
-              alt={current.alt}
-              class="relative z-10 max-h-[90vh] max-w-[90vw] scale-95 rounded-xl object-contain shadow-2xl transition-all duration-500 ease-out hover:scale-100"
-              onClick={(event) => event.stopPropagation()}
-            />
-
-            <button
-              type="button"
-              aria-label="Закрыть"
-              onClick={closeLightbox}
-              class="absolute right-6 top-6 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-3xl text-white backdrop-blur"
-            >
-              ×
-            </button>
-
-          </div>
-        )}
-
         </>
       );
     };
   },
 });
-
-
-
-
-
-
-
 
 
 

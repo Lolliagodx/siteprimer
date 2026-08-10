@@ -45,7 +45,7 @@ export const navItems: NavItem[] = [
   { label: 'О нас', id: 'vision' },
   { label: 'Этапы', id: 'process' },
   { label: 'Технологии', id: 'technology' },
-  { label: 'Работы', id: 'projects' },
+  { label: 'Фото строительства', id: 'construction-photos' },
   { label: 'FAQ', id: 'faq' },
 ];
 
@@ -526,7 +526,7 @@ export const technologyAccordionCards: TechnologyAccordionCard[] = [
 export const companyLinks = [
   { label: 'Введиние и студия', id: 'vision' },
   { label: 'Технология SCIP', id: 'technology' },
-  { label: 'Избранные Работы', id: 'projects' },
+  { label: 'Фото строительства', id: 'construction-photos' },
   { label: 'Устойчивость', id: 'studio' },
 ];
 
@@ -536,3 +536,4 @@ export const socialLinks: SocialLink[] = [
   { label: 'Instagram', href: '#' },
   { label: 'LinkedIn', href: '#' },
 ];
+
