@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-stone-50 text-stone-900 antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+/* Scroll margin for anchor navigation past fixed header */
+section[id],
+footer {
+  scroll-margin-top: 80px;
+}
+
+.bronze-text {
+  background: linear-gradient(-45deg, #4a3320 0%, #a67c52 25%, #dcb589 50%, #a67c52 75%, #4a3320 100%);
+  background-size: 300% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 6s linear infinite;
+  text-shadow: 0 4px 20px rgba(166, 124, 82, 0.2);
+}
+
+.bronze-text-light {
+  background: linear-gradient(-45deg, #b88a58 0%, #f8d5a6 25%, #ffffff 50%, #f8d5a6 75%, #b88a58 100%);
+  background-size: 300% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 6s linear infinite;
+  text-shadow: 0 4px 20px rgba(248, 213, 166, 0.3);
+}
+
+.animate-projects-reveal {
+  animation: slideDownProjects 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.float-card {
+  animation: softFloatCard 7s ease-in-out infinite;
+}
+
+.brief-card {
+  contain: layout paint style;
+}
+
+.brief-card-trigger {
+  appearance: none;
+  border-radius: 0;
+}
+
+.brief-card-trigger:focus-visible {
+  outline: 2px solid rgba(184, 138, 88, 0.7);
+  outline-offset: 2px;
+}
+
+.brief-card-stable {
+  --brief-panel-space: clamp(4.75rem, 10vw, 6rem);
+}
+
+.brief-panel {
+  contain: layout paint;
+  transform: translateZ(0);
+}
+
+.brief-panel-dynamic {
+  transition:
+    grid-template-rows 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.32s ease;
+}
+
+.brief-panel-stable {
+  min-height: var(--brief-panel-space);
+}
+
+.brief-panel-shell {
+  height: var(--brief-panel-space);
+}
+
+.brief-panel-inner {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.brief-panel-content {
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.28s ease;
+}
+
+.brief-card-stable .brief-panel-inner {
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(120, 113, 108, 0.5) transparent;
+}
+
+.brief-card-stable .brief-panel-inner::-webkit-scrollbar {
+  width: 4px;
+}
+
+.brief-card-stable .brief-panel-inner::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.45);
+  border-radius: 999px;
+}
+
+.handover-stage-grid {
+  contain: layout paint style;
+}
+
+.reveal-motion {
+  contain: paint;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.ambient-orb {
+  pointer-events: none;
+}
+
+.device-weak .backdrop-blur-sm,
+.device-weak .backdrop-blur-md,
+.device-weak .backdrop-blur-lg {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.device-weak .animate-bounce,
+.device-weak .device-weak-spin,
+.device-weak .bronze-text,
+.device-weak .bronze-text-light,
+.device-weak .float-card {
+  animation: none !important;
+}
+
+.device-weak .will-change-transform,
+.device-weak .brief-card,
+.device-weak .brief-panel,
+.device-weak .brief-panel-inner,
+.device-weak .reveal-motion {
+  will-change: auto !important;
+}
+
+.device-weak .ambient-orb {
+  filter: blur(40px) !important;
+  opacity: 0.28 !important;
+}
+
+@keyframes shine {
+  to {
+    background-position: 300% center;
+  }
+}
+
+@keyframes phoneRotate {
+  0%,
+  20% {
+    transform: rotate(0deg);
+  }
+
+  50%,
+  70% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slideDownProjects {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softFloatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ===== MOBILE ADAPTATION (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .bronze-text,
+  .bronze-text-light,
+  .float-card {
+    animation: none;
+  }
+
+  /* Remove text-shadow from bronze text — causes repaint on scroll */
+  .bronze-text,
+  .bronze-text-light {
+    text-shadow: none;
+  }
+
+  .brief-panel {
+    contain: layout style;
+    transform: none;
+    will-change: auto;
+  }
+
+  .brief-card-stable {
+    --brief-panel-space: clamp(4rem, 17vw, 5.25rem);
+  }
+
+  .brief-panel-inner {
+    backface-visibility: visible;
+    transform: none;
+    will-change: auto;
+  }
+
+  .brief-panel-dynamic {
+    transition:
+      grid-template-rows 0.24s ease,
+      opacity 0.18s ease;
+  }
+
+  .brief-panel-content {
+    transition: opacity 0.18s ease;
+  }
+
+  .handover-stage-grid .reveal-motion {
+    transition: none !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-lg {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Simplify Reveal compositing on mobile */
+  .reveal-motion {
+    contain: none;
+    backface-visibility: visible;
+    transform: none;
+    will-change: auto !important;
+  }
+
+  /* Hero: replace clip-path animation with opacity fade (clip-path is GPU-expensive) */
+  .hero-slide-mobile {
+    clip-path: none !important;
+    transition: opacity 0.8s ease !important;
+  }
+
+  /* Disable 3D perspective on SCIP visualization */
+  .scip-mobile-flat {
+    perspective: none !important;
+    transform-style: flat !important;
+  }
+
+  .scip-mobile-flat * {
+    transform-style: flat !important;
+  }
+
+  /* Remove hover transitions on touch devices */
+  .group:hover > *,
+  .group:hover {
+    transition-duration: 0s !important;
+  }
+
+  /* Anchor scroll offset */
+  section[id],
+  footer {
+    scroll-margin-top: 72px;
+  }
+
+  /* Remove ambient orbs entirely on mobile — blur() is GPU-heavy even at low opacity */
+  .ambient-orb {
+    display: none !important;
+  }
+}
+
+/* ===== SMALL MOBILE (max-width: 390px) ===== */
+@media (max-width: 390px) {
+  section[id],
+  footer {
+    scroll-margin-top: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-card {
+    animation: none;
+  }
+}
