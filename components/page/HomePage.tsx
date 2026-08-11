@@ -11,6 +11,8 @@ import {
 } from 'vue';
 import HomeClosingSections from '~/components/page/home/HomeClosingSections';
 import HomeProcessSections from '~/components/page/home/HomeProcessSections';
+import HomeStageOverviewSection from '~/components/page/home/HomeStageOverviewSection';
+import HomeStatsSection from '~/components/page/home/HomeStatsSection';
 import HomeVisionSection from '~/components/page/home/HomeVisionSection';
 import HomeDividerSection from '~/components/page/home/HomeDividerSection';
 import HeritageSection from '~/components/sections/HeritageSection';
@@ -486,10 +488,12 @@ export default defineComponent({
 
           <HomeDividerSection navigateToSection={scrollToSection} />
 
+          <HomeTechnologySection isMobile={isMobileValue} />
+          <HomeStatsSection />
           <HeritageSection isMobile={isMobileValue} />
           <HomeVisionSection />
           <HomeProcessSections isMobile={isMobileValue} />
-          <HomeTechnologySection isMobile={isMobileValue} />
+          <HomeStageOverviewSection />
           <HomeBuildSections isMobile={isMobileValue} />
           <HomeProjectsSection isMobile={isMobileValue} isMobilePortrait={isMobilePortraitValue} />
           <HomeFaqSection />

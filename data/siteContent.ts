@@ -473,8 +473,9 @@ export const portfolioGapCards: ProjectCard[] = [
 export const stats: StatItem[] = [
   { label: 'Экономия энергии', value: 'До 60%' },
   { label: 'Срок службы', value: '100+ Лет' },
-  { label: 'Время сборки', value: '14–21 День' },
-  { label: 'Звукоизоляция', value: 'STC 60+' },
+  { label: 'Срок строительства', value: '90 дней' },
+  { label: 'Звукоизоляция', value: 'Rw 47–53+ дБ' },
+  { label: 'Стоимость', value: 'от 85 тр/м² под ключ' },
 ];
 
 export const technologyAccordionCards: TechnologyAccordionCard[] = [
