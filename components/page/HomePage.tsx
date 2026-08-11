@@ -399,7 +399,7 @@ export default defineComponent({
               playsinline
               class="absolute inset-0 h-full w-full scale-105 object-cover opacity-80"
             >
-              <source src="/video/sarasota-open-house.mp4" type="video/mp4" />
+              <source src={withSiteBase("/video/sarasota-open-house.mp4")} type="video/mp4" />
             </video>
 
             <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-stone-950/80" />
@@ -462,6 +462,7 @@ export default defineComponent({
     };
   },
 });
+
 
 
 
