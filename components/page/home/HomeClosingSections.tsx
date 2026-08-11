@@ -21,7 +21,7 @@ export default defineComponent({
   props: {
     openModal: {
       type: Function as PropType<() => void>,
-      required: true,
+      required: false,
     },
     navigateToSection: {
       type: Function as PropType<(event: Event | MouseEvent, id: string) => void>,
@@ -46,19 +46,19 @@ export default defineComponent({
 
     return () => (
       <>
-        <section id="studio" class="relative overflow-hidden bg-stone-50 py-20 sm:py-24 md:py-32" style={studioSectionStyle}>
+        <section id="studio" class="relative overflow-hidden bg-stone-50 py-10 sm:py-12 md:py-14" style={studioSectionStyle}>
 
           <div class="relative z-10 mx-auto max-w-4xl px-5 text-center sm:px-6">
             <Reveal>
-              <h2 class="bronze-text mb-6 overflow-visible pb-[0.16em] pt-[0.06em] text-3xl font-light leading-[1.18] tracking-tighter sm:mb-8 sm:text-4xl md:text-6xl">
-                Готовы построить <span class="font-medium italic">будущее?</span>
+              <h2 class="bronze-text mb-5 overflow-visible pb-[0.16em] pt-[0.06em] text-3xl font-light leading-[1.18] tracking-tighter sm:mb-6 sm:text-4xl md:text-5xl">
+                Готовы построить <span class="font-medium not-italic">будущее?</span>
               </h2>
-              <p class="mx-auto mb-8 max-w-2xl text-base text-stone-600 sm:mb-12 sm:text-lg">
+              <p class="mx-auto mb-6 max-w-2xl text-base text-stone-600 sm:mb-7 sm:text-lg">
                 Закажите дом от ЭвоСтройТех и испытайте сочетание выразительной архитектуры, инженерной прочности и бескомпромиссного комфорта.
               </p>
               <button
-                onClick={props.openModal}
-                class="group inline-flex w-full items-center justify-center gap-2 bg-stone-900 px-6 py-4 text-sm font-medium text-white shadow-2xl shadow-stone-900/20 transition-[transform,background-color,box-shadow] duration-300 hover:-translate-y-1 hover:bg-stone-800 hover:shadow-stone-900/40 sm:w-auto sm:gap-3 sm:px-10 sm:py-5"
+                onClick={(event: MouseEvent) => props.navigateToSection(event, 'project-form')}
+                class="group inline-flex w-full items-center justify-center gap-2 bg-stone-900 px-6 py-3.5 text-sm font-medium text-white shadow-xl shadow-stone-900/15 transition-[transform,background-color,box-shadow] duration-300 hover:-translate-y-1 hover:bg-stone-800 hover:shadow-stone-900/30 sm:w-auto sm:gap-3 sm:px-9 sm:py-4"
               >
                 Назначить частную консультацию
                 <ArrowRight size={16} class="transition-transform group-hover:translate-x-1" />
@@ -67,24 +67,22 @@ export default defineComponent({
           </div>
         </section>
 
-        <footer class="border-t border-stone-900 bg-stone-950 py-12 text-stone-400 sm:py-16 md:py-20" style={footerSectionStyle}>
+        <footer class="concrete-dark border-t border-white/10 bg-stone-950 py-8 text-stone-400 sm:py-10" style={footerSectionStyle}>
           <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
-            <div class="mb-10 grid grid-cols-1 gap-10 sm:mb-12 sm:gap-12 md:mb-16 md:grid-cols-4 md:gap-16">
-              <div class="col-span-1 md:col-span-2">
-                <div class="mb-6 flex cursor-pointer items-center gap-2 sm:mb-8" onClick={(event: MouseEvent) => props.navigateToSection(event, 'hero')}>
+            <div class="mb-6 grid grid-cols-1 gap-7 md:grid-cols-[1.4fr_1fr_1fr] md:items-start md:gap-10">
+              <div>
+                <div class="mb-4 flex cursor-pointer items-center gap-2" onClick={(event: MouseEvent) => props.navigateToSection(event, 'hero')}>
                   <div class="flex h-6 w-6 items-center justify-center bg-white">
                     <div class="h-2 w-2 border border-stone-900" />
                   </div>
                   <span class="text-lg font-medium tracking-tight text-white">ЭвоСтройТех</span>
                 </div>
-                <p class="max-w-sm text-sm leading-relaxed text-stone-500 sm:text-base">
-                  Открываем будущее элитной недвижимости с помощью передовой технологии SCIP и бескомпромиссного архитектурного дизайна.
-                </p>
+                <p class="max-w-sm text-sm leading-relaxed text-stone-500">Строительство эволюционных домов по технологии SCIP.</p>
               </div>
 
               <div>
-                <h4 class="mb-4 text-sm font-medium tracking-wide text-white sm:mb-6">Компания</h4>
-                <ul class="space-y-3 text-sm sm:space-y-4">
+                <h4 class="mb-4 text-sm font-medium tracking-wide text-white">Компания</h4>
+                <ul class="space-y-3 text-sm">
                   {companyLinks.map((link) => (
                     <li key={link.id}>
                       <a
@@ -100,7 +98,7 @@ export default defineComponent({
               </div>
 
               <div>
-                <h4 class="mb-4 text-sm font-medium tracking-wide text-white sm:mb-6">Связь</h4>
+                <h4 class="mb-4 text-sm font-medium tracking-wide text-white">Связь</h4>
                 <div class="flex flex-wrap items-center gap-2.5 sm:gap-3">
                   {socialLinks.map((link) => {
                     const Icon = getSocialIcon(link.label);
@@ -121,7 +119,7 @@ export default defineComponent({
               </div>
             </div>
 
-            <div class="flex flex-col items-center justify-center gap-4 border-t border-stone-800 pt-6 text-xs text-stone-600 sm:gap-0 sm:pt-8 md:flex-row md:justify-end">
+            <div class="flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-6 text-xs text-stone-600 md:flex-row md:justify-end">
               <div class="flex gap-4 sm:gap-6">
                 <a href="#" class="transition-colors hover:text-white">
                   Политика конфиденциальности

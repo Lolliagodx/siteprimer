@@ -1,4 +1,4 @@
-import { Clock, Shield, Wind } from 'lucide-vue-next';
+import { ArrowRight, Clock, Shield, Wind } from 'lucide-vue-next';
 import { defineComponent, type CSSProperties } from 'vue';
 import Reveal from '~/components/ui/Reveal';
 import { withSiteBase } from '~/utils/withSiteBase';
@@ -49,8 +49,15 @@ export default defineComponent({
               </h2>
               <p class="text-base text-stone-500 sm:text-lg">
                 SCIP (Структурные Изоляционные Панели) — это передовая строительная система, заменяющая традиционный каркас и кладку.
-                Она образует монолитную, неразрушимую оболочку, которая дышит, изолирует и защищает.
+                Она образует монолитную оболочку, которая сохраняет тепло, регулирует микроклимат и защищает.
               </p>
+              <a
+                href="#intelligent-wall"
+                class="group mx-auto mt-6 inline-flex items-center gap-2 border border-stone-300 bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-stone-900 transition-colors hover:border-stone-900 hover:bg-stone-900 hover:text-white sm:mt-7 sm:text-sm"
+              >
+                Выбор: дом-термос или интеллектуальная стена ЭвоСтройТех
+                <ArrowRight size={16} class="shrink-0 transition-transform group-hover:translate-x-1" />
+              </a>
             </Reveal>
           </div>
 

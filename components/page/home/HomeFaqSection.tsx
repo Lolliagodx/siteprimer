@@ -22,7 +22,7 @@ export default defineComponent({
     };
 
     return () => (
-      <section id="faq" class="relative overflow-hidden border-b border-stone-200 bg-white py-20 sm:py-24 md:py-32" style={faqSectionStyle}>
+      <section id="faq" class="relative overflow-hidden border-b border-stone-200 bg-white py-14 sm:py-16 md:py-20" style={faqSectionStyle}>
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
           <div class="grid grid-cols-1 items-start gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="lg:col-span-4">
@@ -59,7 +59,7 @@ export default defineComponent({
             </div>
           </div>
 
-          <div class="mt-14 border border-stone-200 bg-stone-50 p-5 sm:mt-16 sm:p-8 md:mt-20 md:p-12">
+          <div class="mt-10 border border-stone-200 bg-stone-50 p-5 sm:mt-12 sm:p-7 md:p-9">
             <div class="grid grid-cols-1 items-center gap-6 sm:gap-8 lg:grid-cols-12">
               <div class="lg:col-span-5">
                 <Reveal>

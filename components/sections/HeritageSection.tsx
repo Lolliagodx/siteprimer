@@ -888,10 +888,7 @@ Solutions, новая добавка не снижает теплотехнич�
                     <div class="border-t border-white/10 px-6 py-6 text-sm leading-7 text-stone-200 sm:px-8 sm:py-8 sm:text-base md:px-10 md:text-lg">
                       <div class="border border-white/10 bg-stone-950/50 p-5 sm:p-6">
                         <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-amber-200/80 sm:text-xs">Видео испытания стены</p>
-                        <p class="mt-3 max-w-3xl text-sm leading-7 text-stone-300 sm:text-base">
-                          Место подготовлено для видеозаписи испытания стены. В материалах проекта исходник испытания отсутствует,
-                          поэтому здесь не используется нерелевантное видео готового дома.
-                        </p>
+                        <div class="mt-4 aspect-video w-full border border-white/10 bg-black/15" aria-label="Видео испытания стены" />
                       </div>
                     </div>
                   </div>

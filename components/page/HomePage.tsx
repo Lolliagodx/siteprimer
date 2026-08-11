@@ -14,7 +14,6 @@ import HomeProcessSections from '~/components/page/home/HomeProcessSections';
 import HomeStageOverviewSection from '~/components/page/home/HomeStageOverviewSection';
 import HomeStatsSection from '~/components/page/home/HomeStatsSection';
 import HomeVisionSection from '~/components/page/home/HomeVisionSection';
-import HomeDividerSection from '~/components/page/home/HomeDividerSection';
 import HeritageSection from '~/components/sections/HeritageSection';
 import HeroSection from '~/components/sections/HeroSection';
 import { useDeviceProfile } from '~/composables/useDeviceProfile';
@@ -296,7 +295,7 @@ export default defineComponent({
                   </a>
                 ))}
                 <button
-                  onClick={openModal}
+                  onClick={(event: MouseEvent) => scrollToSection(event, 'project-form')}
                   class={[
                     'group flex items-center gap-2 whitespace-nowrap px-6 py-2.5 text-sm font-medium transition-all duration-300',
                     isScrolledValue ? 'bg-stone-900 text-white hover:bg-stone-800' : 'bg-white text-stone-900 hover:bg-stone-200',
@@ -413,9 +412,9 @@ export default defineComponent({
                 </a>
               ))}
               <button
-                onClick={() => {
+                onClick={(event: MouseEvent) => {
                   isMenuOpen.value = false;
-                  openModal();
+                  scrollToSection(event, 'project-form');
                 }}
                 class="mt-auto flex w-full items-center justify-center gap-2 bg-stone-900 px-6 py-3.5 text-sm font-medium text-white active:bg-stone-700 sm:py-4"
               >
@@ -488,8 +487,6 @@ export default defineComponent({
             navigateToSection={scrollToSection}
           />
 
-          <HomeDividerSection navigateToSection={scrollToSection} />
-
           <HomeTechnologySection isMobile={isMobileValue} />
           <HomeStatsSection />
           <HeritageSection isMobile={isMobileValue} />
@@ -501,7 +498,7 @@ export default defineComponent({
           <HomeCatalogProjectsSection />
           <HomeProjectsSection isMobile={isMobileValue} isMobilePortrait={isMobilePortraitValue} />
           <HomeFaqSection />
-          <HomeClosingSections openModal={openModal} navigateToSection={scrollToSection} />
+          <HomeClosingSections navigateToSection={scrollToSection} />
         </div>
       );
     };

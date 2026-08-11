@@ -33,7 +33,8 @@ section.concrete-light {
 
 section.bg-stone-900:not(.concrete-light),
 section.bg-stone-950:not(.concrete-light),
-section.concrete-dark {
+section.concrete-dark,
+footer.concrete-dark {
   background-color: #1c1b1a;
   background-image:
     linear-gradient(rgba(12, 12, 11, 0.5), rgba(20, 19, 18, 0.6)),

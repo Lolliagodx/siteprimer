@@ -103,6 +103,17 @@ export default defineComponent({
             style={projectSectionStyle}
           >
             <div class="mx-auto w-full max-w-[1600px] px-4 sm:px-6 md:px-10 lg:px-12">
+              <Reveal>
+                <div id="construction-videos" class="mb-12 border-b border-white/10 pb-8 sm:mb-14 sm:pb-10">
+                  <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-stone-400 sm:text-xs">
+                    Технология в движении
+                  </p>
+                  <h2 class="bronze-text-light text-3xl font-light leading-[1.08] tracking-tighter sm:text-4xl md:text-5xl">
+                    Галерея видео
+                  </h2>
+                </div>
+              </Reveal>
+
               <div class="mb-8 sm:mb-10 md:mb-12">
                 <Reveal>
                   <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-stone-500 sm:text-xs">
@@ -139,14 +150,7 @@ export default defineComponent({
                     <div class="absolute inset-0 bg-stone-950/20" />
                   </button>
 
-                  <div class="relative isolate h-[560px] overflow-hidden bg-stone-950">
-                    <img
-                      src={current.src}
-                      alt=""
-                      aria-hidden="true"
-                      class="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl"
-                    />
-
+                  <div class="relative isolate h-[360px] overflow-hidden sm:h-[480px] lg:h-[560px]">
                     <img
                       key={current.src}
                       src={current.src}
@@ -233,13 +237,6 @@ export default defineComponent({
             class="fixed inset-0 z-50 flex items-center justify-center bg-stone-900/40 p-6 backdrop-blur-xl"
             onClick={closeLightbox}
           >
-
-            <img
-              src={current.src}
-              alt=""
-              aria-hidden="true"
-              class="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl"
-            />
 
             <img
               src={current.src}
