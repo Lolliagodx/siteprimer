@@ -9,8 +9,106 @@ html {
 
 body {
   @apply bg-stone-50 text-stone-900 antialiased;
+  background-color: #eeeae3;
+  background-image:
+    linear-gradient(rgba(248, 246, 242, 0.34), rgba(239, 236, 230, 0.46)),
+    url('../images/concrete-light.webp');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
+}
+
+/* Shared architectural material system: every plain light/dark section uses
+   the same two concrete surfaces instead of flat color fills. */
+section.bg-white,
+section.bg-stone-50,
+section.bg-stone-100,
+section.concrete-light {
+  background-color: rgba(244, 241, 235, 0.08);
+  background-image: none;
+  border-color: transparent;
+}
+
+section.bg-stone-900:not(.concrete-light),
+section.bg-stone-950:not(.concrete-light),
+section.concrete-dark {
+  background-color: #1c1b1a;
+  background-image:
+    linear-gradient(rgba(12, 12, 11, 0.5), rgba(20, 19, 18, 0.6)),
+    url('../images/concrete-dark-v2.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: normal;
+}
+
+/* Sections deliberately switched from dark to light for a clean alternation. */
+section.concrete-light {
+  color: #292524;
+}
+
+section.concrete-light .text-white,
+section.concrete-light .text-stone-50,
+section.concrete-light .text-stone-100,
+section.concrete-light .text-stone-200,
+section.concrete-light .text-stone-300 {
+  color: #44403c;
+}
+
+section.concrete-light .border-white\/10,
+section.concrete-light .border-white\/15,
+section.concrete-light .border-white\/20 {
+  border-color: rgba(120, 113, 108, 0.24);
+}
+
+section.concrete-light .bg-white\/5,
+section.concrete-light .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.56);
+}
+
+section.concrete-light [class*="text-amber-200"],
+section.concrete-light [class*="text-amber-300"] {
+  color: #8a5a24;
+}
+
+section.bg-white + section.bg-white,
+section.bg-white + section.bg-stone-50,
+section.bg-white + section.bg-stone-100,
+section.bg-stone-50 + section.bg-white,
+section.bg-stone-50 + section.bg-stone-50,
+section.bg-stone-50 + section.bg-stone-100,
+section.bg-stone-100 + section.bg-white,
+section.bg-stone-100 + section.bg-stone-50,
+section.bg-stone-100 + section.bg-stone-100 {
+  border-top-color: transparent;
+}
+
+section.concrete-light [class*="bg-stone-950"] .text-white,
+section.concrete-light [class*="bg-stone-950"] .text-stone-50,
+section.concrete-light [class*="bg-stone-950"] .text-stone-100,
+section.concrete-light [class*="bg-stone-950"] .text-stone-200,
+section.concrete-light [class*="bg-stone-950"] .text-stone-300 {
+  color: #f5f5f4;
+}
+
+section.concrete-light [class*="bg-stone-950"] .text-stone-400 {
+  color: #a8a29e;
+}
+
+/* One heading voice across the full long-form page, without replacing the
+   site's original clean typeface with a decorative display font. */
+section h2 {
+  font-family: inherit;
+  text-wrap: balance;
+}
+
+section.bg-stone-900:not(.concrete-light) h2:not(.bronze-text):not(.bronze-text-light),
+section.bg-stone-950:not(.concrete-light) h2:not(.bronze-text):not(.bronze-text-light),
+section.concrete-dark h2:not(.bronze-text):not(.bronze-text-light) {
+  color: #e7e5e4 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 3px 12px rgba(0, 0, 0, 0.42);
 }
 
 /* Scroll margin for anchor navigation past fixed header */
@@ -20,23 +118,23 @@ footer {
 }
 
 .bronze-text {
-  background: linear-gradient(-45deg, #4a3320 0%, #a67c52 25%, #dcb589 50%, #a67c52 75%, #4a3320 100%);
+  background: linear-gradient(-45deg, #4a3320 0%, #9b7048 24%, #d9ad7b 48%, #b48456 72%, #4a3320 100%);
   background-size: 300% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   animation: shine 6s linear infinite;
-  text-shadow: 0 4px 20px rgba(166, 124, 82, 0.2);
+  text-shadow: 0 2px 10px rgba(109, 75, 44, 0.14);
 }
 
 .bronze-text-light {
-  background: linear-gradient(-45deg, #b88a58 0%, #f8d5a6 25%, #ffffff 50%, #f8d5a6 75%, #b88a58 100%);
+  background: linear-gradient(-45deg, #ad8153 0%, #e3c49d 25%, #f5f5f4 50%, #d7b88f 75%, #a67549 100%);
   background-size: 300% auto;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   animation: shine 6s linear infinite;
-  text-shadow: 0 4px 20px rgba(248, 213, 166, 0.3);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
 }
 
 .animate-projects-reveal {

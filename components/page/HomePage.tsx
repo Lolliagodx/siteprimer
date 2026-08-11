@@ -176,7 +176,7 @@ export default defineComponent({
           ref={rootRef}
           style={rootStyle}
           class={[
-            'min-h-screen overflow-x-hidden bg-stone-50 font-sans text-stone-900 selection:bg-stone-300 selection:text-stone-900',
+            'site-shell min-h-screen overflow-x-hidden bg-transparent font-sans text-stone-900 selection:bg-stone-300 selection:text-stone-900',
             isWeakDeviceValue ? 'device-weak' : '',
           ]}
         >

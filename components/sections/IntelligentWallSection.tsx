@@ -25,9 +25,6 @@ export default defineComponent({
   setup() {
     return () => (
       <section id="intelligent-wall" class="relative overflow-hidden border-y border-stone-200 bg-stone-50 py-16 sm:py-20 md:py-24">
-        <div class="absolute -right-24 top-10 h-72 w-72 rounded-full bg-stone-200/60 blur-3xl" />
-        <div class="absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-amber-100/50 blur-3xl" />
-
         <div class="relative mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
           <Reveal>
             <div class="max-w-5xl">

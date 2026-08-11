@@ -15,7 +15,7 @@ export default defineComponent({
   setup(props) {
     return () => (
       <section class="relative overflow-hidden border-y border-stone-200 bg-stone-100 py-10 text-stone-900 sm:py-12 md:py-14">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(120,113,108,0.10),transparent_35%),linear-gradient(135deg,rgba(255,255,255,0.92),rgba(231,229,228,0.88))]" />
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(120,113,108,0.08),transparent_38%)]" />
 
         <div class="relative mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
           <div class="grid items-center gap-7 md:grid-cols-[1fr_auto] md:gap-12">

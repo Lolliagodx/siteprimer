@@ -94,8 +94,7 @@ export default defineComponent({
             </div>
           </section>
 
-          <section class="relative overflow-hidden border-b border-stone-200 bg-stone-50 py-16 sm:py-18 md:py-24">
-            <div class="ambient-orb absolute -top-20 right-0 h-[420px] w-[420px] rounded-full bg-stone-200/50 opacity-70 blur-3xl" />
+          <section class="relative overflow-hidden bg-stone-50 py-16 sm:py-18 md:py-24">
             <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
               <div class="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-8">
                 <div class="lg:col-span-5">
@@ -142,7 +141,7 @@ export default defineComponent({
             </div>
           </section>
 
-          <section class="relative overflow-hidden border-b border-stone-200 bg-white py-16 sm:py-18 md:py-24">
+          <section class="relative overflow-hidden bg-white py-16 sm:py-18 md:py-24">
             <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
               <div class="grid grid-cols-1 items-start gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-8">
                 <div class="lg:col-span-5">

@@ -47,8 +47,6 @@ export default defineComponent({
     return () => (
       <>
         <section id="studio" class="relative overflow-hidden bg-stone-50 py-20 sm:py-24 md:py-32" style={studioSectionStyle}>
-          <div class="ambient-orb absolute right-0 top-0 h-[400px] w-[400px] translate-x-1/3 -translate-y-1/2 rounded-full bg-stone-200/50 opacity-50 blur-3xl sm:h-[600px] sm:w-[600px] md:h-[800px] md:w-[800px]" />
-          <div class="ambient-orb absolute bottom-0 left-0 h-[300px] w-[300px] -translate-x-1/3 translate-y-1/2 rounded-full bg-stone-200/50 opacity-50 blur-3xl sm:h-[400px] sm:w-[400px] md:h-[600px] md:w-[600px]" />
 
           <div class="relative z-10 mx-auto max-w-4xl px-5 text-center sm:px-6">
             <Reveal>

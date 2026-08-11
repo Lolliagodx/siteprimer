@@ -959,7 +959,7 @@ Solutions, новая добавка не снижает теплотехнич�
           </div>
         </section>
 
-        <section class="border-t border-stone-200 bg-white py-12 sm:py-14">
+        <section class="concrete-light border-t border-stone-200 bg-white py-12 sm:py-14">
           <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
             <div class="mb-6 flex flex-col gap-5 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
               <div>
@@ -1086,7 +1086,7 @@ Solutions, новая добавка не снижает теплотехнич�
           </div>
         </section>
 
-        <section id="technology-comparison" class="bg-stone-900 py-12 text-white sm:py-14">
+        <section id="technology-comparison" class="concrete-light bg-stone-900 py-12 text-white sm:py-14">
           <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
             <div class="max-w-5xl">
               <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-stone-400 sm:text-xs">Сравнение по совокупности параметров</p>
@@ -1246,7 +1246,7 @@ Solutions, новая добавка не снижает теплотехнич�
           </div>
         </section>
 
-        <section class="bg-stone-900 py-12 text-white sm:py-16">
+        <section class="concrete-light bg-stone-900 py-12 text-white sm:py-16">
           <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
             <div class="max-w-4xl">
               <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-stone-400 sm:text-xs">Экстремальные сценарии</p>
@@ -1379,7 +1379,7 @@ Solutions, новая добавка не снижает теплотехнич�
           </div>
         </section>
 
-        <section class="bg-stone-900 py-12 text-white sm:py-16 md:py-20">
+        <section class="concrete-light bg-stone-900 py-12 text-white sm:py-16 md:py-20">
           <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
             <div class="max-w-5xl">
               <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-stone-400 sm:text-xs">Для кого этот дом</p>

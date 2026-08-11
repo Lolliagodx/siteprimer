@@ -23,7 +23,6 @@ export default defineComponent({
 
     return () => (
       <section id="faq" class="relative overflow-hidden border-b border-stone-200 bg-white py-20 sm:py-24 md:py-32" style={faqSectionStyle}>
-        <div class="ambient-orb absolute right-0 top-0 h-[420px] w-[420px] rounded-full bg-stone-100 opacity-80 blur-3xl" />
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
           <div class="grid grid-cols-1 items-start gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-8">
             <div class="lg:col-span-4">

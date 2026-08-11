@@ -39,7 +39,6 @@ export default defineComponent({
       return (
         <>
           <section class="relative overflow-hidden border-b border-stone-200 bg-stone-50 py-16 sm:py-18 md:py-24">
-            <div class="ambient-orb absolute left-0 top-0 h-[360px] w-[360px] rounded-full bg-stone-200/40 blur-3xl" />
             <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
               <div class="mb-10 grid grid-cols-1 gap-6 sm:mb-12 sm:gap-8 md:mb-14 lg:grid-cols-12 lg:gap-8">
                 <div class="lg:col-span-4">

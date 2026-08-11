@@ -40,7 +40,6 @@ export default defineComponent({
 
     return () => (
       <section id="technology" class="relative overflow-hidden border-y border-stone-200 bg-white py-20 sm:py-24 md:py-32" style={technologySectionStyle}>
-        <div class="absolute right-0 top-0 -z-10 hidden h-full w-1/2 bg-stone-50/50 lg:block" />
         <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
           <div class="mx-auto mb-14 max-w-3xl sm:mb-20 md:mb-24 md:text-center">
             <Reveal>
@@ -59,10 +58,9 @@ export default defineComponent({
             <div class="relative order-2 overflow-visible lg:order-1">
               <Reveal direction="none">
                 <div class="relative mx-auto w-full max-w-[360px] sm:max-w-[400px] lg:ml-8 lg:max-w-[420px]">
-                  <div class="absolute -inset-3 translate-x-3 translate-y-3 border border-stone-300/70 bg-stone-100 sm:-inset-4 sm:translate-x-4 sm:translate-y-4" />
-                  <div class="absolute -bottom-8 left-1/2 h-16 w-4/5 -translate-x-1/2 bg-stone-950/20 blur-2xl" />
+                  <div class="absolute -bottom-7 left-1/2 h-12 w-3/4 -translate-x-1/2 bg-stone-950/12 blur-2xl" />
 
-                  <figure class="relative border border-stone-200 bg-white p-2.5 shadow-[0_32px_80px_rgba(28,25,23,0.20),0_10px_28px_rgba(28,25,23,0.10)] sm:p-3">
+                  <figure class="relative border border-stone-200/80 bg-white/90 p-2 shadow-[0_24px_65px_rgba(28,25,23,0.14),0_8px_22px_rgba(28,25,23,0.08)] backdrop-blur-sm sm:p-2.5">
                     <div class="relative overflow-hidden bg-stone-200">
                       <img
                         src={scipWallSampleSrc}
