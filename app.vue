@@ -22,18 +22,14 @@ useHead({
       });`,
     },
   ],
+  noscript: [
+    {
+      innerHTML: '<div><img src="https://mc.yandex.ru/watch/110976397" style="position:absolute;left:-9999px" alt="" /></div>',
+    },
+  ],
 });
 </script>
 
 <template>
   <NuxtPage />
-  <noscript>
-    <div>
-      <img
-        src="https://mc.yandex.ru/watch/110976397"
-        style="position: absolute; left: -9999px"
-        alt=""
-      />
-    </div>
-  </noscript>
 </template>

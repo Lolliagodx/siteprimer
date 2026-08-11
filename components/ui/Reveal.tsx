@@ -147,7 +147,12 @@ export default defineComponent({
       rafId = window.requestAnimationFrame(applyVisibilityState);
     };
 
-    onMounted(scheduleVisibilityCheck);
+    const mobile = ref(false);
+
+    onMounted(() => {
+      mobile.value = isMobileScreen();
+      scheduleVisibilityCheck();
+    });
 
     watch(
       () => props.isReady,
@@ -164,10 +169,8 @@ export default defineComponent({
       disconnect();
     });
 
-    const mobile = isMobileScreen();
-
     return () => {
-      const style: CSSProperties = mobile
+      const style: CSSProperties = mobile.value
         ? {
             opacity: isVisible.value ? 1 : 0,
             transform: isVisible.value ? 'none' : mobileTransformByDirection[props.direction],

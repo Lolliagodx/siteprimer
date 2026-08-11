@@ -242,7 +242,7 @@ export const supportCards: BriefCard[] = [
 
 export const projectCards: ProjectCard[] = [
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5153.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5153.webp'),
     alt: 'Готовый одноэтажный дом с аккуратным фасадом',
     title: 'Готовый дом у сада',
     location: 'SCIP / ГОТОВЫЙ ОБЪЕКТ',
@@ -250,7 +250,7 @@ export const projectCards: ProjectCard[] = [
     delay: 0,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5121.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5121.webp'),
     alt: 'Первый этап сборки стен на строительной площадке',
     title: 'Старт коробки',
     location: 'SCIP / ЭТАП СБОРКИ',
@@ -258,7 +258,7 @@ export const projectCards: ProjectCard[] = [
     delay: 80,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5122.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5122.webp'),
     alt: 'Фасадные стены в процессе монтажа с крупными проемами',
     title: 'Монтаж фасадных стен',
     location: 'SCIP / МОНТАЖ',
@@ -266,7 +266,7 @@ export const projectCards: ProjectCard[] = [
     delay: 160,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5123.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5123.webp'),
     alt: 'Сборка крупного объема дома на участке',
     title: 'Сборка на площадке',
     location: 'SCIP / КОРОБКА ДОМА',
@@ -274,7 +274,7 @@ export const projectCards: ProjectCard[] = [
     delay: 240,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5124.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5124.webp'),
     alt: 'Угловой узел и внутренние перегородки в сборке',
     title: 'Угловой узел',
     location: 'SCIP / УЗЛЫ',
@@ -282,7 +282,7 @@ export const projectCards: ProjectCard[] = [
     delay: 320,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5127.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5127.webp'),
     alt: 'Возведение наружного периметра дома',
     title: 'Рост периметра',
     location: 'SCIP / СТЕНЫ',
@@ -290,7 +290,7 @@ export const projectCards: ProjectCard[] = [
     delay: 400,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5159.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5159.webp'),
     alt: 'Готовая вилла с балконами и светлым фасадом',
     title: 'Вилла на финальном этапе',
     location: 'SCIP / ГОТОВЫЙ ОБЪЕКТ',
@@ -298,7 +298,7 @@ export const projectCards: ProjectCard[] = [
     delay: 480,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5128.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5128.webp'),
     alt: 'Световой проем и внутренние стены на раннем этапе',
     title: 'Световой проем',
     location: 'SCIP / ВНУТРЕННИЙ КОНТУР',
@@ -306,7 +306,7 @@ export const projectCards: ProjectCard[] = [
     delay: 560,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5130.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5130.webp'),
     alt: 'Периметр дома с подготовкой внутреннего двора',
     title: 'Контур двора',
     location: 'SCIP / ПЛАНИРОВКА',
@@ -314,7 +314,7 @@ export const projectCards: ProjectCard[] = [
     delay: 640,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5136.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5136.webp'),
     alt: 'Узкий технический проход вдоль внешней стены',
     title: 'Технический проход',
     location: 'SCIP / ДЕТАЛИ',
@@ -322,7 +322,7 @@ export const projectCards: ProjectCard[] = [
     delay: 720,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5137.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5137.webp'),
     alt: 'Строительство второго уровня с лесами',
     title: 'Этаж в сборке',
     location: 'SCIP / ДВА УРОВНЯ',
@@ -330,7 +330,7 @@ export const projectCards: ProjectCard[] = [
     delay: 800,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5140.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5140.webp'),
     alt: 'Монолитная коробка дома с крупными оконными проемами',
     title: 'Монолитная коробка',
     location: 'SCIP / ОСНОВНОЙ ОБЪЕМ',
@@ -338,7 +338,7 @@ export const projectCards: ProjectCard[] = [
     delay: 880,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5160.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5160.webp'),
     alt: 'Готовая светлая вилла с несколькими балконами',
     title: 'Вилла на склоне',
     location: 'SCIP / ГОТОВЫЙ ОБЪЕКТ',
@@ -346,7 +346,7 @@ export const projectCards: ProjectCard[] = [
     delay: 960,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5143.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5143.webp'),
     alt: 'Вид сверху на готовый дом и участок',
     title: 'Дом с высоты',
     location: 'SCIP / АЭРОСЪЕМКА',
@@ -354,7 +354,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1040,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5145.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5145.webp'),
     alt: 'Железобетонный контур дома в процессе заливки и сборки',
     title: 'Бетонный контур',
     location: 'SCIP / ЭТАП БЕТОНА',
@@ -362,7 +362,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1120,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5147.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5147.webp'),
     alt: 'Дом с террасой и готовыми основными стенами',
     title: 'Терраса и стены',
     location: 'SCIP / ФОРМИРОВАНИЕ ОБЪЕМА',
@@ -370,7 +370,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1200,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5152.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5152.webp'),
     alt: 'Армирование крупной плиты перекрытия на объекте',
     title: 'Армирование плиты',
     location: 'SCIP / ПЕРЕКРЫТИЕ',
@@ -378,7 +378,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1280,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5163.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5163.webp'),
     alt: 'Дом с кровельным каркасом на этапе возведения',
     title: 'Каркас крыши',
     location: 'SCIP / КРОВЕЛЬНЫЙ ЭТАП',
@@ -386,7 +386,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1360,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5167.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5167.webp'),
     alt: 'Современный одноэтажный дом с чистым фасадом',
     title: 'Современный фасад',
     location: 'SCIP / ГОТОВЫЙ ОБЪЕКТ',
@@ -394,7 +394,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1440,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5165.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5165.webp'),
     alt: 'Прямолинейный объем дома на участке с рельефом',
     title: 'Объем на рельефе',
     location: 'SCIP / АРХИТЕКТУРА',
@@ -402,7 +402,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1520,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5170.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5170.webp'),
     alt: 'Длинная светлая галерея вдоль фасада здания',
     title: 'Фасадная галерея',
     location: 'SCIP / ДЕТАЛИ ОБЪЕКТА',
@@ -410,7 +410,7 @@ export const projectCards: ProjectCard[] = [
     delay: 1600,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5171.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5171.webp'),
     alt: 'Крупный жилой корпус на этапе внешних строительных работ',
     title: 'Крупный жилой корпус',
     location: 'SCIP / МАСШТАБНЫЙ ОБЪЕКТ',
@@ -421,7 +421,7 @@ export const projectCards: ProjectCard[] = [
 
 export const portfolioGapCards: ProjectCard[] = [
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5138.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5138.webp'),
     alt: 'Армированная плита основания перед следующим этапом работ',
     title: 'Основание под коробку',
     location: 'SCIP / ФУНДАМЕНТ',
@@ -429,7 +429,7 @@ export const portfolioGapCards: ProjectCard[] = [
     delay: 440,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5148.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5148.webp'),
     alt: 'Большая подготовленная плоскость перекрытия на объекте',
     title: 'Плоскость перекрытия',
     location: 'SCIP / ПЕРЕКРЫТИЕ',
@@ -437,7 +437,7 @@ export const portfolioGapCards: ProjectCard[] = [
     delay: 780,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5150.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5150.webp'),
     alt: 'Ровная бетонная поверхность и технический проем',
     title: 'Техническая площадка',
     location: 'SCIP / ПОДГОТОВКА',
@@ -445,7 +445,7 @@ export const portfolioGapCards: ProjectCard[] = [
     delay: 980,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5157.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5157.webp'),
     alt: 'Стены в процессе набора высоты на объекте',
     title: 'Рост высоты',
     location: 'SCIP / СБОРКА СТЕН',
@@ -453,7 +453,7 @@ export const portfolioGapCards: ProjectCard[] = [
     delay: 1180,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5162.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5162.webp'),
     alt: 'Небольшой дом с завершенным фасадом и чистой геометрией',
     title: 'Чистая геометрия фасада',
     location: 'SCIP / ГОТОВЫЙ ОБЪЕКТ',
@@ -461,7 +461,7 @@ export const portfolioGapCards: ProjectCard[] = [
     delay: 1380,
   },
   {
-    image: withSiteBase('/image/projects/featured-replacement/IMG_5168.PNG'),
+    image: withSiteBase('/image/projects/featured-replacement/IMG_5168.webp'),
     alt: 'Длинный строительный контур с подготовленными стенами',
     title: 'Линейный контур',
     location: 'SCIP / ПЕРИМЕТР',
