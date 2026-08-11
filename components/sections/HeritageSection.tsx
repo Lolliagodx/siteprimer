@@ -1,5 +1,6 @@
-import { ChevronDown } from 'lucide-vue-next';
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-vue-next';
 import { computed, defineComponent, onBeforeUnmount, ref, watch, type CSSProperties } from 'vue';
+import IntelligentWallSection from '~/components/sections/IntelligentWallSection';
 import { withSiteBase } from '~/utils/withSiteBase';
 
 export default defineComponent({
@@ -12,7 +13,7 @@ export default defineComponent({
   },
   setup(props) {
     const openPanel = ref<'comparison' | 'research' | null>(null);
-    const featuredAdvantages = ref<string[]>([]);
+    const advantageCursor = ref(0);
     const isEpsModalOpen = ref(false);
     const isScienceModalOpen = ref(false);
     const isMetricsModalOpen = ref(false);
@@ -667,20 +668,21 @@ Solutions, новая добавка не снижает теплотехнич�
       openPanel.value = openPanel.value === panel ? null : panel;
     };
 
-    const showRandomAdvantages = () => {
-      const pool = [...advantages];
-      const next: string[] = [];
+    const visibleAdvantages = computed(() =>
+      Array.from({ length: Math.min(3, advantages.length) }, (_, offset) => {
+        const index = (advantageCursor.value + offset) % advantages.length;
+        return { index, text: advantages[index]! };
+      }),
+    );
 
-      while (pool.length > 0 && next.length < 3) {
-        const index = Math.floor(Math.random() * pool.length);
-        const [picked] = pool.splice(index, 1);
+    const advantageProgress = computed(() => ((advantageCursor.value + 1) / advantages.length) * 100);
 
-        if (picked) {
-          next.push(picked);
-        }
-      }
+    const showPreviousAdvantages = () => {
+      advantageCursor.value = (advantageCursor.value - 3 + advantages.length) % advantages.length;
+    };
 
-      featuredAdvantages.value = next;
+    const showNextAdvantages = () => {
+      advantageCursor.value = (advantageCursor.value + 3) % advantages.length;
     };
 
     const activeDetailImage = () => {
@@ -884,19 +886,11 @@ Solutions, новая добавка не снижает теплотехнич�
                 >
                   <div class="overflow-hidden">
                     <div class="border-t border-white/10 px-6 py-6 text-sm leading-7 text-stone-200 sm:px-8 sm:py-8 sm:text-base md:px-10 md:text-lg">
-                      <div class="space-y-5">
-                        <p>
-                          Пеноблок пар пропускает — и вода в нём замерзает, рвёт стену изнутри. Бетон SCIP пар тоже пропускает,
-                          но по-другому: он забирает влагу из воздуха, когда душно, и возвращает, когда сухо. Это называется
-                          капиллярная активность.
-                        </p>
-                        <p>
-                          У газоблоков её почти нет. У бетона SCIP — есть. Поэтому в таком доме всегда комфортно дышать, и стена
-                          при этом остаётся сухой десятилетиями.
-                        </p>
-                        <p class="text-stone-50">
-                          Короче: если хотите дом, который не требует компромиссов, — присмотритесь к SCIP. Остальное — из
-                          прошлого века.
+                      <div class="border border-white/10 bg-stone-950/50 p-5 sm:p-6">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-amber-200/80 sm:text-xs">Видео испытания стены</p>
+                        <p class="mt-3 max-w-3xl text-sm leading-7 text-stone-300 sm:text-base">
+                          Место подготовлено для видеозаписи испытания стены. В материалах проекта исходник испытания отсутствует,
+                          поэтому здесь не используется нерелевантное видео готового дома.
                         </p>
                       </div>
                     </div>
@@ -907,44 +901,83 @@ Solutions, новая добавка не снижает теплотехнич�
           </div>
         </section>
 
+        <IntelligentWallSection />
+
         <section class="border-t border-stone-200 bg-stone-50 py-10 sm:py-12">
           <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
             <div class="border border-stone-200 bg-white px-5 py-5 shadow-[0_18px_40px_rgba(28,25,23,0.06)] sm:px-6 sm:py-6">
-              <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                 <div>
-                  <p class="bronze-text text-xl font-semibold tracking-[-0.03em] sm:text-2xl">
-                    Узнайте пару преимуществ такого дома.
+                  <p class="text-[10px] font-bold uppercase tracking-[0.24em] text-stone-400 sm:text-xs">Навигация по преимуществам</p>
+                  <p class="bronze-text mt-2 text-xl font-semibold tracking-[-0.03em] sm:text-2xl">
+                    Посмотрите 50+ преимуществ вашего уникального дома
                   </p>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={showRandomAdvantages}
-                  class="bg-stone-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-stone-800"
-                >
-                  Узнать преимущество такого дома
-                </button>
+                <div class="flex items-center gap-3">
+                  <button
+                    type="button"
+                    aria-label="Предыдущие преимущества"
+                    onClick={showPreviousAdvantages}
+                    class="flex h-11 w-11 items-center justify-center border border-stone-300 text-stone-700 transition-colors hover:border-stone-900 hover:bg-stone-900 hover:text-white"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <div class="min-w-[92px] text-center text-sm font-medium tabular-nums text-stone-600">
+                    {String(advantageCursor.value + 1).padStart(2, '0')} / {advantages.length}
+                  </div>
+                  <button
+                    type="button"
+                    aria-label="Следующие преимущества"
+                    onClick={showNextAdvantages}
+                    class="flex h-11 w-11 items-center justify-center bg-stone-900 text-white transition-colors hover:bg-stone-800"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+                </div>
               </div>
 
-              {featuredAdvantages.value.length ? (
-                <div class="mt-5 grid gap-3 sm:mt-6">
-                  {featuredAdvantages.value.map((advantage) => (
-                    <div key={advantage} class="border border-stone-200 bg-stone-50 px-4 py-3 text-sm leading-6 text-stone-700 sm:text-base">
-                      {advantage}
-                    </div>
-                  ))}
+              <div class="mt-5 h-px overflow-hidden bg-stone-200 sm:mt-6">
+                <div
+                  class="h-full bg-gradient-to-r from-[#a9783f] via-[#e5c18f] to-[#a9783f] transition-[width] duration-500"
+                  style={{ width: `${advantageProgress.value}%` }}
+                >
                 </div>
-              ) : null}
+              </div>
+
+              <div class="mt-5 grid gap-3 sm:mt-6">
+                {visibleAdvantages.value.map((advantage) => (
+                  <div key={advantage.index} class="grid grid-cols-[44px_1fr] items-start border border-stone-200 bg-stone-50 text-stone-700">
+                    <div class="flex h-full min-h-14 items-center justify-center border-r border-stone-200 text-xs font-bold tabular-nums text-stone-400">
+                      {String(advantage.index + 1).padStart(2, '0')}
+                    </div>
+                    <p class="px-4 py-3 text-sm leading-6 sm:text-base">{advantage.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         <section class="border-t border-stone-200 bg-white py-12 sm:py-14">
           <div class="mx-auto max-w-7xl px-5 sm:px-6 md:px-12">
-            <div class="mb-6 sm:mb-8">
-              <p class="bronze-text inline-block overflow-visible pb-[0.16em] pt-[0.06em] text-3xl font-light leading-[1.18] tracking-tighter sm:text-4xl md:text-5xl">
-                Суть метода
-              </p>
+            <div class="mb-6 flex flex-col gap-5 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.28em] text-stone-500 sm:text-xs">Кратко</p>
+                <h2 class="bronze-text mt-2 inline-block overflow-visible pb-[0.16em] text-3xl font-light leading-[1.18] tracking-tighter sm:text-4xl md:text-5xl">
+                  Суть метода
+                </h2>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => {
+                  isEpsModalOpen.value = true;
+                }}
+                class="inline-flex items-center justify-center self-start border border-stone-900 px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-stone-900 transition-colors hover:bg-stone-900 hover:text-white sm:self-auto sm:text-sm"
+              >
+                Подробнее
+              </button>
             </div>
 
             <div class="border border-stone-200 bg-stone-50 px-5 py-6 shadow-[0_18px_40px_rgba(28,25,23,0.05)] sm:px-7 sm:py-8 md:px-10">
@@ -955,15 +988,6 @@ Solutions, новая добавка не снижает теплотехнич�
                   </div>
                   <div class="border-l-2 border-amber-400 pl-4">
                     Жёсткий EPS утеплитель между слоями высокопрочного бетона.
-                    <button
-                      type="button"
-                      onClick={() => {
-                        isEpsModalOpen.value = true;
-                      }}
-                      class="ml-3 mt-3 inline-flex items-center border border-stone-900 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-stone-900 transition-colors hover:bg-stone-900 hover:text-white sm:mt-0 sm:text-[13px]"
-                    >
-                      Подробнее
-                    </button>
                   </div>
                   <div class="border-l-2 border-stone-300 pl-4">
                     Пространственная стальная ферма, связывающая бетонные слои в единую несущую конструкцию.
