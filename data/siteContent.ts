@@ -44,7 +44,7 @@ export const heroImages = [
 export const navItems: NavItem[] = [
   { label: 'О нас', id: 'vision' },
   { label: 'Этапы', id: 'process' },
-  { label: 'Уникальные преимущества Технологии', id: 'technology' },
+  { label: 'Уникальные преимущества Технологии', id: 'technology-comparison' },
   { label: 'Фото строительства', id: 'construction-photos' },
   { label: 'Проекты', id: 'projects' },
 ];
@@ -536,5 +536,6 @@ export const socialLinks: SocialLink[] = [
   { label: 'Instagram', href: '#' },
   { label: 'LinkedIn', href: '#' },
 ];
+
 
 
