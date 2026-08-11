@@ -12,6 +12,7 @@ import {
 import HomeClosingSections from '~/components/page/home/HomeClosingSections';
 import HomeProcessSections from '~/components/page/home/HomeProcessSections';
 import HomeVisionSection from '~/components/page/home/HomeVisionSection';
+import HomeDividerSection from '~/components/page/home/HomeDividerSection';
 import HeritageSection from '~/components/sections/HeritageSection';
 import HeroSection from '~/components/sections/HeroSection';
 import { useDeviceProfile } from '~/composables/useDeviceProfile';
@@ -483,6 +484,8 @@ export default defineComponent({
             navigateToSection={scrollToSection}
           />
 
+          <HomeDividerSection navigateToSection={scrollToSection} />
+
           <HeritageSection isMobile={isMobileValue} />
           <HomeVisionSection />
           <HomeProcessSections isMobile={isMobileValue} />
@@ -496,6 +499,7 @@ export default defineComponent({
     };
   },
 });
+
 
 
 
