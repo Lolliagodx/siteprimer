@@ -25,6 +25,8 @@ import { withSiteBase } from '~/utils/withSiteBase';
 
 const HomeTechnologySection = defineAsyncComponent(() => import('~/components/page/home/HomeTechnologySection'));
 const HomeBuildSections = defineAsyncComponent(() => import('~/components/page/home/HomeBuildSections'));
+const HomeCompanySections = defineAsyncComponent(() => import('~/components/page/home/HomeCompanySections'));
+const HomeCatalogProjectsSection = defineAsyncComponent(() => import('~/components/page/home/HomeCatalogProjectsSection'));
 const HomeProjectsSection = defineAsyncComponent(() => import('~/components/page/home/HomeProjectsSection'));
 const HomeFaqSection = defineAsyncComponent(() => import('~/components/page/home/HomeFaqSection'));
 
@@ -492,9 +494,11 @@ export default defineComponent({
           <HomeStatsSection />
           <HeritageSection isMobile={isMobileValue} />
           <HomeVisionSection />
+          <HomeCompanySections />
           <HomeProcessSections isMobile={isMobileValue} />
           <HomeStageOverviewSection />
           <HomeBuildSections isMobile={isMobileValue} />
+          <HomeCatalogProjectsSection />
           <HomeProjectsSection isMobile={isMobileValue} isMobilePortrait={isMobilePortraitValue} />
           <HomeFaqSection />
           <HomeClosingSections openModal={openModal} navigateToSection={scrollToSection} />
