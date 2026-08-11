@@ -44,9 +44,9 @@ export const heroImages = [
 export const navItems: NavItem[] = [
   { label: 'О нас', id: 'vision' },
   { label: 'Этапы', id: 'process' },
-  { label: 'Технологии', id: 'technology' },
+  { label: 'Уникальные преимущества Технологии', id: 'technology' },
   { label: 'Фото строительства', id: 'construction-photos' },
-  { label: 'FAQ', id: 'faq' },
+  { label: 'Проекты', id: 'projects' },
 ];
 
 export const contactHighlights: BriefCard[] = [
@@ -536,4 +536,5 @@ export const socialLinks: SocialLink[] = [
   { label: 'Instagram', href: '#' },
   { label: 'LinkedIn', href: '#' },
 ];
+
 

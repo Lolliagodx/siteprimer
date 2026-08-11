@@ -263,33 +263,41 @@ export default defineComponent({
                 <div class="flex h-7 w-7 items-center justify-center bg-stone-900 transition-transform duration-500 group-hover:rotate-90 sm:h-8 sm:w-8">
                   <div class="h-2.5 w-2.5 border border-white sm:h-3 sm:w-3" />
                 </div>
-                <span class={['text-lg font-medium tracking-tight transition-colors duration-500 sm:text-xl', isScrolledValue ? 'bronze-text' : 'bronze-text-light']}>
-                  ЭвоСтройТех
-                </span>
+                <div class="flex flex-col leading-none">
+                  <span class={['text-lg font-medium tracking-tight transition-colors duration-500 sm:text-xl', isScrolledValue ? 'bronze-text' : 'bronze-text-light']}>
+                    ЭвоСтройТех
+                  </span>
+                  <span class={[
+  'mt-1 text-[8px] leading-tight tracking-[0.14em] transition-colors duration-500 sm:text-[9px]',
+  isScrolledValue ? 'text-stone-500' : 'text-stone-300',
+]}>
+                    Строительство<br/>эволюционных домов
+                  </span>
+                </div>
               </div>
 
-              <div class="hidden items-center gap-6 lg:gap-8 xl:gap-10 md:flex">
+              <div class="hidden flex-1 items-center justify-center gap-6 lg:gap-8 xl:gap-10 md:flex ml-12">
                 {navItems.map((item) => (
                   <a
                     key={item.id}
                     href={`#${item.id}`}
                     onClick={(event: MouseEvent) => scrollToSection(event, item.id)}
                     class={[
-                      'text-sm font-medium transition-colors duration-300 hover:text-stone-400',
+                      'text-sm font-medium transition-colors duration-300 hover:text-stone-400 whitespace-nowrap',
                       isScrolledValue ? 'text-stone-600 hover:text-stone-900' : 'text-stone-300 hover:text-white',
                     ]}
                   >
-                    {item.label}
+                    <span class={item.id === 'technology' ? 'max-w-52 text-center leading-tight' : ''}>{item.label}</span>
                   </a>
                 ))}
                 <button
                   onClick={openModal}
                   class={[
-                    'group flex items-center gap-2 px-6 py-2.5 text-sm font-medium transition-all duration-300',
+                    'group flex items-center gap-2 whitespace-nowrap px-6 py-2.5 text-sm font-medium transition-all duration-300',
                     isScrolledValue ? 'bg-stone-900 text-white hover:bg-stone-800' : 'bg-white text-stone-900 hover:bg-stone-200',
                   ]}
                 >
-                  Связаться
+                  Обсудить проект
                   <ArrowRight size={14} class="transition-transform group-hover:translate-x-1" />
                 </button>
                 <div
@@ -368,7 +376,7 @@ export default defineComponent({
                   onClick={(event: MouseEvent) => scrollToSection(event, item.id)}
                   class="border-b border-stone-200 pb-3 text-xl font-medium leading-tight text-stone-950 transition-colors active:text-stone-500 sm:pb-4 sm:text-2xl"
                 >
-                  {item.label}
+                  <span class={item.id === 'technology' ? 'max-w-52 text-center leading-tight' : ''}>{item.label}</span>
                 </a>
               ))}
               <button
@@ -384,6 +392,17 @@ export default defineComponent({
           </div>
 
           <section class="relative overflow-hidden bg-stone-950 text-stone-100">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              class="absolute inset-0 h-full w-full scale-105 object-cover opacity-80"
+            >
+              <source src="/video/sarasota-open-house.mp4" type="video/mp4" />
+            </video>
+
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-stone-950/80" />
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.16),transparent_34%),linear-gradiнаent(160deg,rgba(24,24,27,0.98)_0%,rgba(12,10,9,1)_52%,rgba(28,25,23,0.98)_100%)]" />
             <div class="absolute left-1/2 top-24 h-48 w-48 -translate-x-1/2 rounded-full bg-amber-200/10 blur-3xl sm:h-72 sm:w-72" />
 
@@ -443,3 +462,25 @@ export default defineComponent({
     };
   },
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
