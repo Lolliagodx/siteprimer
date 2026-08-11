@@ -68,39 +68,39 @@ export default defineComponent({
                 </div>
 
                 <div class="relative my-8">
-                  <div class="mb-4 flex items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-[0.14em] sm:text-xs">
+                  <div class="mb-4 grid gap-2 text-[10px] font-semibold uppercase tracking-[0.14em] sm:flex sm:items-center sm:justify-between sm:gap-3 sm:text-xs">
                     <span class="text-sky-200">Пар из помещения входит в бетон</span>
                     <span class="flex items-center gap-2 text-amber-300"><ArrowLeft size={18} /> Возвращается при сухом воздухе</span>
                   </div>
 
-                  <div class="grid grid-cols-[1fr_auto_1.15fr_auto_1fr] items-stretch gap-2 sm:gap-3">
+                  <div class="grid grid-cols-1 items-stretch gap-2 sm:grid-cols-[1fr_auto_1.15fr_auto_1fr] sm:gap-3">
                     <div class="relative flex min-h-44 flex-col items-center justify-center border border-sky-200/30 bg-stone-700 px-2 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-100 sm:text-xs">
                       <Droplets class="mb-3 text-sky-200" size={22} />
                       Внутренний бетон
                       <span class="mt-2 text-[9px] normal-case tracking-normal text-stone-300">Буфер влаги</span>
                     </div>
-                    <div class="flex flex-col items-center justify-center gap-4">
-                      <ArrowRight class="text-sky-200" size={20} />
-                      <ArrowLeft class="text-amber-300" size={20} />
+                    <div class="flex items-center justify-center gap-4 py-1 sm:flex-col sm:py-0">
+                      <ArrowRight class="rotate-90 text-sky-200 sm:rotate-0" size={20} />
+                      <ArrowLeft class="-rotate-90 text-amber-300 sm:rotate-0" size={20} />
                     </div>
                     <div class="relative flex min-h-44 items-center justify-center overflow-hidden border border-amber-200/30 bg-stone-100 px-2 text-center text-[10px] font-bold uppercase tracking-[0.16em] text-stone-800 sm:text-xs">
                       <div class="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_30%_30%,#d6d3d1_0,transparent_18%),radial-gradient(circle_at_70%_70%,#d6d3d1_0,transparent_16%)]" />
                       <span class="relative">Жёсткий EPS<br />останавливает влагу</span>
                     </div>
-                    <div class="flex items-center justify-center text-stone-600"><ShieldCheck size={20} /></div>
+                    <div class="flex items-center justify-center py-1 text-stone-600 sm:py-0"><ShieldCheck size={20} /></div>
                     <div class="flex min-h-44 flex-col items-center justify-center border border-white/15 bg-stone-700 px-2 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-200 sm:text-xs">
                       Наружный бетон
                       <span class="mt-2 text-[9px] normal-case tracking-normal text-stone-400">Остаётся сухим</span>
                     </div>
                   </div>
 
-                  <div class="mt-4 grid grid-cols-2 gap-3 text-[10px] leading-4 sm:text-xs">
+                  <div class="mt-4 grid grid-cols-1 gap-3 text-[10px] leading-4 sm:grid-cols-2 sm:text-xs">
                     <div class="border-l-2 border-sky-300 pl-3 text-stone-300">При повышенной влажности внутренний бетон принимает часть водяного пара.</div>
                     <div class="border-l-2 border-amber-300 pl-3 text-stone-300">Когда воздух становится суше, бетон отдаёт влагу обратно в помещение.</div>
                   </div>
                 </div>
 
-                <div class="relative grid grid-cols-2 gap-3 text-xs leading-5 text-stone-300 sm:text-sm sm:leading-6">
+                <div class="relative grid grid-cols-1 gap-3 text-xs leading-5 text-stone-300 sm:grid-cols-2 sm:text-sm sm:leading-6">
                   <div class="border border-white/10 bg-white/5 p-3 sm:p-4">
                     <ThermometerSun size={18} class="mb-2 text-amber-300" />
                     Точка росы находится в толще утеплителя, который не впитывает воду и не гниёт.
@@ -139,3 +139,4 @@ export default defineComponent({
     );
   },
 });
+

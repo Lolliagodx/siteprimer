@@ -69,19 +69,26 @@ export default defineComponent({
         return;
       }
 
-      const element = document.getElementById(id);
-      if (element) {
-        const headerOffset = 80;
+      isMenuOpen.value = false;
+
+      window.setTimeout(() => {
+        const element = document.getElementById(id);
+
+        if (!element) {
+          console.warn(`Section with id "${id}" was not found`);
+          return;
+        }
+
+        const headerOffset = window.innerWidth < 768 ? 92 : 80;
         const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.scrollY - headerOffset;
 
         window.scrollTo({
-          top: offsetPosition,
+          top: Math.max(0, offsetPosition),
           behavior: 'smooth',
         });
-      }
-
-      isMenuOpen.value = false;
+      }, 180);
     };
 
     const rootStyle = {
@@ -504,6 +511,8 @@ export default defineComponent({
     };
   },
 });
+
+
 
 
 
